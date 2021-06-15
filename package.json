@@ -1,0 +1,83 @@
+{
+  "homepage": "http://xlysi.github.io",
+  "name": "xlysi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack -d --watch",
+    "start": "node ./server/index.js",
+    "build": "webpack -p",
+    "react-dev": "webpack -d --watch",
+    "server-dev": "nodemon server/index.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d react-client/dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "xlysi"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.10.4",
+    "@babel/runtime": "^7.11.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.19.0",
+    "css-loader": "^4.2.1",
+    "express": "^4.17.1",
+    "fomantic-ui": "^2.8.6",
+    "fs": "0.0.1-security",
+    "jwt-decode": "^2.2.0",
+    "lodash": "^4.17.20",
+    "react": "^16.8.0",
+    "react-awesome-reveal": "^3.0.0",
+    "react-dom": "^16.8.0",
+    "react-in-viewport": "^1.0.0-alpha.14",
+    "react-redux": "^7.2.1",
+    "react-responsive-carousel": "^3.2.9",
+    "react-router": "^4.1.2",
+    "react-router-dom": "^4.1.2",
+    "react-router-hash-link": "^2.0.0",
+    "react-update-url-on-scroll": "^3.5.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^1.1.1",
+    "url-loader": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.6",
+    "babel-preset-latest": "^6.24.1",
+    "gh-pages": "^3.2.1",
+    "redux-devtools-extension": "^2.13.8",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-syntax-class-properties",
+      "@babel/plugin-transform-runtime"
+    ],
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry, usage"
+        }
+      ]
+    ]
+  },
+  "browser": {
+    "fs": false
+  }
+}
